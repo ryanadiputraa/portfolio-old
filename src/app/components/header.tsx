@@ -14,6 +14,13 @@ export const Header = () => {
     setIsDark(!isDark)
   }
 
+  const onOpenSideNav = () => {
+    const sideNav = document.querySelector("#side-nav")
+    if (sideNav?.classList.contains("-translate-x-full")) {
+      sideNav.classList.remove("-translate-x-full")
+    }
+  }
+
   return (
     <header className="flex justify-between items-center px-6 sm:px-12 py-6 fixed top-0 w-full">
       <Link href={"/"}>
@@ -54,7 +61,7 @@ export const Header = () => {
         </ul>
       </nav>
       <button className="inline-block sm:hidden">
-        <GiHamburgerMenu className="text-2xl" />
+        <GiHamburgerMenu className="text-2xl" onClick={onOpenSideNav} />
       </button>
     </header>
   )
