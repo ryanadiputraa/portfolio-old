@@ -26,32 +26,32 @@ const experiences: IExperience[] = [
 ]
 
 const skills: ISkill[] = [
-  { label: "Golang", icon: "https://img.icons8.com/color/240/golang.png" },
-  { label: "NodeJS", icon: "https://img.icons8.com/color/240/nodejs.png" },
+  { label: "Golang", icon: "https://img.icons8.com/color/144/golang.png" },
+  { label: "NodeJS", icon: "https://img.icons8.com/color/144/nodejs.png" },
   {
     label: "ReactJS",
     icon: "https://img.icons8.com/office/160/react.png",
   },
-  { label: "NextJS", icon: "https://img.icons8.com/color/240/nextjs.png" },
+  { label: "NextJS", icon: "https://img.icons8.com/color/144/nextjs.png" },
   {
     label: "PostgreSQL",
-    icon: "https://img.icons8.com/color/240/postgreesql.png",
+    icon: "https://img.icons8.com/color/144/postgreesql.png",
   },
   {
     label: "Docker",
-    icon: "https://img.icons8.com/color/240/docker.png",
+    icon: "https://img.icons8.com/color/144/docker.png",
   },
   {
     label: "Redis",
-    icon: "https://img.icons8.com/color/240/redis.png",
+    icon: "https://img.icons8.com/color/144/redis.png",
   },
   {
     label: "Firebase",
-    icon: "https://img.icons8.com/color/240/firebase.png",
+    icon: "https://img.icons8.com/color/144/firebase.png",
   },
   {
     label: "Flutter",
-    icon: "https://img.icons8.com/color/240/flutter.png",
+    icon: "https://img.icons8.com/color/144/flutter.png",
   },
 ]
 

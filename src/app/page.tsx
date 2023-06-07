@@ -14,7 +14,7 @@ export default function Home() {
         and learning new things or technology while doing it.
       </h4>
       <div className="flex justify-center items-center mt-6 text-3xl sm:text-5xl gap-4 sm:gap-8">
-        <a href="https://github.com/ryanadiputraa">
+        <a href="https://github.com/ryanadiputraa" target="_blank">
           <AiFillGithub
             data-tooltip-id="github-tooltip"
             data-tooltip-content="Github"
@@ -28,6 +28,8 @@ export default function Home() {
         <a
           className="text-blue-400"
           href="https://www.linkedin.com/in/ryanadiputraa/"
+          target="_blank"
+          rel="noreferrer"
         >
           <AiFillLinkedin
             data-tooltip-id="linkedin-tooltip"
@@ -39,7 +41,12 @@ export default function Home() {
             style={{ fontSize: "0.7rem" }}
           />
         </a>
-        <a className="text-blue-600" href="mailto:ryannadiputraa@gmail.com">
+        <a
+          className="text-blue-600"
+          href="mailto:ryannadiputraa@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <MdEmail
             data-tooltip-id="email-tooltip"
             data-tooltip-content="Email"
@@ -50,7 +57,13 @@ export default function Home() {
             style={{ fontSize: "0.7rem" }}
           />
         </a>
-        <a className="text-red-400" href="/file/RESUME.docx.pdf" download>
+        <a
+          className="text-red-400"
+          href="/file/RESUME.docx.pdf"
+          download
+          target="_blank"
+          rel="noreferrer"
+        >
           <HiDocumentText
             data-tooltip-id="resume-tooltip"
             data-tooltip-content="Resume"

@@ -12,6 +12,9 @@ module.exports = {
         white: "#F1F1F1",
         accent: "#5492F0",
       },
+      backdropBlur: {
+        xs: "1px",
+      },
     },
   },
   plugins: [],
