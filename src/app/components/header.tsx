@@ -28,7 +28,7 @@ export const Header = ({ pages }: Props) => {
   }
 
   return (
-    <header className="flex justify-between items-center px-6 sm:px-12 py-6 fixed top-0 w-full">
+    <header className="flex justify-between items-center bg-white/50 dark:bg-black/50 backdrop-blur-sm px-6 sm:px-12 py-6 fixed top-0 w-full z-10">
       <Link href={"/"}>
         <h1>Ryan Adi Putra</h1>
       </Link>

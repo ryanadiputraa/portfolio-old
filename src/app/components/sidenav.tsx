@@ -30,7 +30,7 @@ export const SideNav = ({ pages }: Props) => {
   return (
     <nav
       id="side-nav"
-      className="flex flex-col items-start w-full min-h-screen absolute top-0 left-0 p-6 bg-white/95 dark:bg-black/95 -translate-x-full transition-transform "
+      className="flex flex-col items-start w-full min-h-screen fixed z-10 top-0 left-0 p-6 bg-white/95 dark:bg-black/95 -translate-x-full transition-transform "
     >
       <div className="flex justify-between items-center w-full mb-12">
         <div

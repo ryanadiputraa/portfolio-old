@@ -42,10 +42,10 @@ export default function RootLayout({
         className={`${inter.className} transition-colors text-black dark:text-white bg-white dark:bg-black`}
       >
         <Header pages={pages} />
-        <SideNav pages={pages} />
         <main className="pt-20 min-h-screen flex justify-center px-4 sm:px-0">
           {children}
         </main>
+        <SideNav pages={pages} />
       </body>
     </html>
   )
