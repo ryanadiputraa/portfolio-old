@@ -58,7 +58,7 @@ const skills: ISkill[] = [
 export default function About() {
   return (
     <div className="max-w-4xl w-full pt-4 pb-12 px-4">
-      <h4 className="text-3xl font-bold mb-2 text-accent text-center sm:text-left">
+      <h4 className="text-3xl font-bold mb-4 text-accent text-center sm:text-left">
         Profile
       </h4>
       <div>
@@ -70,15 +70,15 @@ export default function About() {
           Univerity
         </p>
       </div>
-      <div className="flex flex-col items-center gap-2 mt-16">
+      <div className="flex flex-col items-center gap-2 mt-20">
         {experiences.map((exp, idx) => (
           <Timeline key={idx} experience={exp} />
         ))}
       </div>
-      <h4 className="text-3xl font-bold mb-2 text-accent mt-16 text-center sm:text-left">
+      <h4 className="text-3xl font-bold mb-4 text-accent mt-20 text-center sm:text-left">
         Skills
       </h4>
-      <div className="flex flex-wrap justify-center items-start gap-8">
+      <div className="flex flex-wrap justify-center items-start gap-[2.25rem]">
         {skills.map((skill, idx) => (
           <Skill key={idx} skill={skill} />
         ))}

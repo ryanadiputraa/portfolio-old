@@ -6,6 +6,7 @@ import { BsMoonStarsFill, BsSunFill } from "react-icons/bs"
 import { GiHamburgerMenu } from "react-icons/gi"
 
 import { INav } from "../layout"
+import Image from "next/image"
 
 interface Props {
   pages: INav[]
@@ -29,7 +30,13 @@ export const Header = ({ pages }: Props) => {
 
   return (
     <header className="flex justify-between items-center bg-white/50 dark:bg-black/50 backdrop-blur-sm px-6 sm:px-12 py-6 fixed top-0 w-full z-10">
-      <Link href={"/"}>
+      <Link className="flex items-center gap-2" href={"/"}>
+        <Image
+          src="https://img.icons8.com/external-others-inmotus-design/67/external-Code-round-icons-others-inmotus-design-11.png"
+          width={20}
+          height={20}
+          alt=""
+        />
         <h1>Ryan Adi Putra</h1>
       </Link>
       <nav className="hidden sm:inline-block">

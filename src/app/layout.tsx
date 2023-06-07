@@ -1,4 +1,5 @@
 import "./globals.css"
+import "react-tooltip/dist/react-tooltip.css"
 import { Open_Sans } from "next/font/google"
 
 import { Header } from "./components/header"
@@ -9,6 +10,9 @@ const inter = Open_Sans({ subsets: ["latin"] })
 export const metadata = {
   title: "Ryan Adi Putra",
   description: "Software Engineer Portfolio",
+  icons: {
+    icon: "/img/favicon.png",
+  },
 }
 
 export interface INav {
