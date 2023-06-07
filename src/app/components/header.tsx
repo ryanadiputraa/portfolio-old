@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs"
+import { GiHamburgerMenu } from "react-icons/gi"
 
 export const Header = () => {
   const [isDark, setIsDark] = useState(true)
@@ -14,11 +15,11 @@ export const Header = () => {
   }
 
   return (
-    <header className="flex justify-between items-center px-12 py-6 fixed top-0 w-full">
+    <header className="flex justify-between items-center px-6 sm:px-12 py-6 fixed top-0 w-full">
       <Link href={"/"}>
         <h1>Ryan Adi Putra</h1>
       </Link>
-      <nav>
+      <nav className="hidden sm:inline-block">
         <ul className="flex justify-between items-center gap-6">
           <li>
             <Link href={"/about"}>About Me</Link>
@@ -52,6 +53,9 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
+      <button className="inline-block sm:hidden">
+        <GiHamburgerMenu className="text-2xl" />
+      </button>
     </header>
   )
 }

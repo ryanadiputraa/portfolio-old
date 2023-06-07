@@ -21,7 +21,9 @@ export default function RootLayout({
         className={`${inter.className} transition-colors text-black dark:text-white bg-white dark:bg-black`}
       >
         <Header />
-        <main className="mt-20">{children}</main>
+        <main className="pt-20 min-h-screen flex justify-center px-4 sm:px-0">
+          {children}
+        </main>
       </body>
     </html>
   )
