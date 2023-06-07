@@ -5,7 +5,13 @@ import { useState } from "react"
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs"
 import { IoMdArrowBack } from "react-icons/io"
 
-export const SideNav = () => {
+import { INav } from "../layout"
+
+interface Props {
+  pages: INav[]
+}
+
+export const SideNav = ({ pages }: Props) => {
   const [isDark, setIsDark] = useState(true)
 
   const onCloseSideNav = () => {
@@ -51,30 +57,17 @@ export const SideNav = () => {
         </button>
       </div>
       <ul className="flex flex-col w-full gap-4">
-        <li className="">
-          <Link
-            className="border-b-2 border-solid border-black dark:border-white inline-block w-full py-2"
-            href={"/about"}
-          >
-            About Me
-          </Link>
-        </li>
-        <li className="">
-          <Link
-            className="border-b-2 border-solid border-black dark:border-white inline-block w-full py-2"
-            href={"/projects"}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className="">
-          <Link
-            className="border-b-2 border-solid border-black dark:border-white inline-block w-full py-2"
-            href={"/blog"}
-          >
-            Blog
-          </Link>
-        </li>
+        {pages.map((page) => (
+          <li key={page.href}>
+            <Link
+              className="border-b-2 border-solid border-black dark:border-white inline-block w-full py-2"
+              href={page.href}
+              onClick={onCloseSideNav}
+            >
+              {page.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   )

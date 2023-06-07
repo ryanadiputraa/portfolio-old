@@ -11,6 +11,26 @@ export const metadata = {
   description: "Software Engineer Portfolio",
 }
 
+export interface INav {
+  label: string
+  href: string
+}
+
+const pages: INav[] = [
+  {
+    href: "/about",
+    label: "About Me",
+  },
+  {
+    href: "/projects",
+    label: "Projects",
+  },
+  {
+    href: "/blog",
+    label: "Blog",
+  },
+]
+
 export default function RootLayout({
   children,
 }: {
@@ -21,8 +41,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} transition-colors text-black dark:text-white bg-white dark:bg-black`}
       >
-        <Header />
-        <SideNav />
+        <Header pages={pages} />
+        <SideNav pages={pages} />
         <main className="pt-20 min-h-screen flex justify-center px-4 sm:px-0">
           {children}
         </main>

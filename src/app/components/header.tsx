@@ -5,7 +5,13 @@ import { useState } from "react"
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs"
 import { GiHamburgerMenu } from "react-icons/gi"
 
-export const Header = () => {
+import { INav } from "../layout"
+
+interface Props {
+  pages: INav[]
+}
+
+export const Header = ({ pages }: Props) => {
   const [isDark, setIsDark] = useState(true)
 
   const onToggleDarkMode = () => {
@@ -27,17 +33,15 @@ export const Header = () => {
         <h1>Ryan Adi Putra</h1>
       </Link>
       <nav className="hidden sm:inline-block">
-        <ul className="flex justify-between items-center gap-6">
-          <li>
-            <Link href={"/about"}>About Me</Link>
-          </li>
-          <li>
-            <Link href={"/projects"}>Projects</Link>
-          </li>
-          <li>
-            <Link href={"/blog"}>Blog</Link>
-          </li>
-          <li>
+        <ul className="flex justify-between items-center">
+          {pages.map((page) => (
+            <li key={page.href}>
+              <Link className="p-2 mx-2" href={page.href}>
+                {page.label}
+              </Link>
+            </li>
+          ))}
+          <li className="ml-4">
             <div
               className="flex justify-between items-center bg-black dark:bg-white py-1 w-[3.15rem] px-1 rounded-full cursor-pointer"
               onClick={onToggleDarkMode}
