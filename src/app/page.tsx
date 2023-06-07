@@ -6,12 +6,12 @@ import { Tooltip } from "react-tooltip"
 export default function Home() {
   return (
     <div className="w-full flex flex-col justify-center items-center px-4">
-      <h1 className="text-2xl sm:text-4xl">Hi, I'm Ryan 👋</h1>
+      <h1 className="text-2xl sm:text-4xl">Hi, I&apos;m Ryan 👋</h1>
       <h4 className="text-sm sm:text-base mt-6 max-w-2xl text-center text-gradient">
-        I'm a Software Engineer based in Palu, Indonesia. Specialized in Backend
-        Development with experience building full-stack applications. I'm
-        passionate about building software to solve real world problems and
-        learning new things or technology while doing it.
+        I&apos;m a Software Engineer based in Palu, Indonesia. Specialized in
+        Backend Development with experience building full-stack applications.
+        I&apos;m passionate about building software to solve real world problems
+        and learning new things or technology while doing it.
       </h4>
       <div className="flex justify-center items-center mt-6 text-3xl sm:text-5xl gap-4 sm:gap-8">
         <a href="https://github.com/ryanadiputraa">
