@@ -11,6 +11,8 @@ module.exports = {
         black: "#161616",
         white: "#F1F1F1",
         accent: "#5492F0",
+        "light-accent": "#DEEBFF",
+        "dark-black": "#000000",
       },
       backdropBlur: {
         xs: "1px",

@@ -29,7 +29,7 @@ export const Header = ({ pages }: Props) => {
   }
 
   return (
-    <header className="flex justify-between items-center bg-white/50 dark:bg-black/50 backdrop-blur-sm px-6 sm:px-12 py-6 fixed top-0 w-full z-10">
+    <header className="flex justify-between items-center bg-white/50 dark:bg-black/50 backdrop-blur-sm px-6 sm:px-12 py-6 fixed top-0 w-full z-50">
       <Link className="flex items-center gap-2" href={"/"}>
         <Image
           src="https://img.icons8.com/external-others-inmotus-design/67/external-Code-round-icons-others-inmotus-design-11.png"

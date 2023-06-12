@@ -46,31 +46,34 @@ const skills: ISkill[] = [
     icon: "https://img.icons8.com/color/144/redis.png",
   },
   {
-    label: "Firebase",
-    icon: "https://img.icons8.com/color/144/firebase.png",
+    label: "Typescript",
+    icon: "https://img.icons8.com/color/144/typescript.png",
   },
-  {
-    label: "Flutter",
-    icon: "https://img.icons8.com/color/144/flutter.png",
-  },
+  // {
+  //   label: "Firebase",
+  //   icon: "https://img.icons8.com/color/144/firebase.png",
+  // },
+  // {
+  //   label: "Flutter",
+  //   icon: "https://img.icons8.com/color/144/flutter.png",
+  // },
 ]
 
 export default function About() {
   return (
-    <div className="max-w-4xl w-full pt-4 pb-12 px-4">
+    <div className="max-w-4xl w-full pt-12 pb-12 px-4">
       <h4 className="text-3xl font-bold mb-4 text-accent text-center sm:text-left">
         Profile
       </h4>
       <div>
         <p className="text-center sm:text-left">
           A Software Engineer specialized in Backend Engineering mainly using
-          Golang and familiarity in NodeJS with Typescript. Has experience
-          building full-stack application using NextJS or ReactJS for Frontend
-          development. Last year Informatics Engineering Student at Tadulako
-          Univerity
+          Golang with experiences building full-stack application using NextJS
+          or ReactJS for Frontend development. Last year Informatics Engineering
+          Student at Tadulako Univerity.
         </p>
       </div>
-      <div className="flex flex-col items-center gap-2 mt-20">
+      <div className="flex flex-col items-center gap-4 mt-20">
         {experiences.map((exp, idx) => (
           <Timeline key={idx} experience={exp} />
         ))}

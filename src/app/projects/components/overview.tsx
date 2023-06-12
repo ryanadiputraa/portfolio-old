@@ -1,8 +1,5 @@
-"use client"
-
 import Image from "next/image"
-import { useState } from "react"
-import { BsFileEarmarkCodeFill } from "react-icons/bs"
+import { AiFillGithub } from "react-icons/ai"
 import { BiWorld } from "react-icons/bi"
 import { Tooltip } from "react-tooltip"
 
@@ -10,72 +7,115 @@ export interface IProjectOverview {
   image: string
   title: string
   description: string
+  liveURL: string
   codeURL: string
-  demoURL: string
+  secondCodeURL?: string
+  skilss: string[]
 }
 
 interface Props {
   overview: IProjectOverview
+  isReverse: boolean
 }
 
-export const Overview = ({ overview }: Props) => {
-  const [onHover, setOnHover] = useState(false)
-
+export const Overview = ({ overview, isReverse }: Props) => {
   return (
-    <div className="relative overflow-hidden w-[26rem] h-auto sm:h-60 rounded-xl">
-      <Image
-        className={`absolute w-full h-full object-cover transition-all brightness-50 ${
-          onHover ? "scale-110" : ""
-        }`}
-        src={overview.image}
-        width={400}
-        height={200}
-        alt=""
-      />
-      <div
-        className={`text-white w-full h-full flex flex-col justify-start items-start px-6 pt-24 pb-8 bg-gray-400/10 transition-transform backdrop-blur-sm ${
-          onHover ? "sm:backdrop-blur-sm" : "sm:backdrop-blur-xs"
-        }`}
-        onMouseEnter={() => setOnHover(true)}
-        onMouseLeave={() => setOnHover(false)}
-      >
-        <h2 className="font-bold text-xl text-accent">{overview.title}</h2>
-        <p className="text-sm mt-1">{overview.description}</p>
-        <div className="mt-4 flex items-center gap-4">
+    <div
+      className={`relative flex items-start w-full min-h-80 ${
+        isReverse ? "sm:flex-row-reverse sm:text-right" : "flex-row text-left"
+      }`}
+    >
+      <div className="w-full sm:w-[30rem] h-full sm:h-auto p-4 sm:p-0 z-10">
+        <h2 className="text-xl font-bold">{overview.title}</h2>
+        <p
+          className={`text-sm rounded-sm p-4 mt-4 bg-gradient-to-r ${
+            isReverse
+              ? "from-white to-gray-300 dark:from-dark-black dark:to-gray-800"
+              : "from-gray-300 to-white dark:from-dark-black dark:to-gray-800"
+          }`}
+        >
+          {overview.description}
+        </p>
+        <div
+          className={`flex flex-wrap items-start gap-2 mt-8 ${
+            isReverse ? "sm:flex-row-reverse" : "flex-row"
+          }`}
+        >
+          {overview.skilss.map((skill, idx) => (
+            <span
+              key={idx}
+              className="text-accent bg-light-accent py-1 px-4 font-bold rounded-full text-xs"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+        <div
+          className={`flex items-center gap-4 mt-4 ${
+            isReverse ? "sm:flex-row-reverse" : "flex-row"
+          }`}
+        >
           <a
             className="text-3xl cursor-pointer"
             href={overview.codeURL}
             target="_blank"
             rel="noreferrer"
           >
-            <BsFileEarmarkCodeFill
-              data-tooltip-id={`${overview.image}-code`}
-              data-tooltip-content="Code"
+            <AiFillGithub
+              data-tooltip-id={`${overview.title}-code-1`}
+              data-tooltip-content="Code (Backend)"
             />
             <Tooltip
-              id={`${overview.image}-code`}
+              id={`${overview.title}-code-1`}
               place="bottom"
-              style={{ fontSize: "0.7rem" }}
+              style={{ fontSize: "0.8rem" }}
             />
           </a>
+          {overview.secondCodeURL && (
+            <a
+              className="text-3xl cursor-pointer"
+              href={overview.secondCodeURL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillGithub
+                data-tooltip-id={`${overview.title}-code-2`}
+                data-tooltip-content="Code (Frontend)"
+              />
+              <Tooltip
+                id={`${overview.title}-code-2`}
+                place="bottom"
+                style={{ fontSize: "0.8rem" }}
+              />
+            </a>
+          )}
           <a
-            className="text-orange-400 text-4xl cursor-pointer"
-            href={overview.demoURL}
+            className="text-3xl cursor-pointer"
+            href={overview.liveURL}
             target="_blank"
             rel="noreferrer"
           >
             <BiWorld
-              data-tooltip-id={`${overview.image}-demo`}
+              data-tooltip-id={`${overview.title}-live`}
               data-tooltip-content="Live"
             />
             <Tooltip
-              id={`${overview.image}-demo`}
+              id={`${overview.title}-live`}
               place="bottom"
-              style={{ fontSize: "0.7rem" }}
+              style={{ fontSize: "0.8rem" }}
             />
           </a>
         </div>
       </div>
+      <Image
+        className={`self-center absolute opacity-30 sm:opacity-80 w-full h-full sm:w-[30rem] object-cover sm:object-contain ${
+          isReverse ? "sm:left-0" : "right-0"
+        }`}
+        src={overview.image}
+        width={500}
+        height={350}
+        alt=""
+      />
     </div>
   )
 }
