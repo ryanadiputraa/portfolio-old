@@ -11,7 +11,7 @@ interface Props {
 // Observer component render animation-class when component is visible on every page load
 // animation-class won't be removed when children is not visible the same page load
 export const Observer = ({ children, animationClass, className }: Props) => {
-  const [isVisible, setVisible] = useState(false)
+  const [isVisible, setVisible] = useState(true)
   const domRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
