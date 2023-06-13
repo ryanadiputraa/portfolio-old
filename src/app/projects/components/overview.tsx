@@ -1,3 +1,4 @@
+import { Observer } from "@/app/components/obeserver"
 import Image from "next/image"
 import { AiFillGithub } from "react-icons/ai"
 import { BiWorld } from "react-icons/bi"
@@ -20,7 +21,8 @@ interface Props {
 
 export const Overview = ({ overview, isReverse }: Props) => {
   return (
-    <div
+    <Observer
+      animationClass="animate-fade-in"
       className={`relative flex items-start w-full min-h-80 ${
         isReverse ? "sm:flex-row-reverse sm:text-right" : "flex-row text-left"
       }`}
@@ -116,6 +118,6 @@ export const Overview = ({ overview, isReverse }: Props) => {
         height={350}
         alt=""
       />
-    </div>
+    </Observer>
   )
 }
