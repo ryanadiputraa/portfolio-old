@@ -8,7 +8,7 @@ export interface IProjectOverview {
   image: string
   title: string
   description: string
-  liveURL: string
+  liveURL?: string
   codeURL: string
   secondCodeURL?: string
   skilss: string[]
@@ -91,22 +91,24 @@ export const Overview = ({ overview, isReverse }: Props) => {
               />
             </a>
           )}
-          <a
-            className="text-3xl cursor-pointer"
-            href={overview.liveURL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <BiWorld
-              data-tooltip-id={`${overview.title}-live`}
-              data-tooltip-content="Live"
-            />
-            <Tooltip
-              id={`${overview.title}-live`}
-              place="bottom"
-              style={{ fontSize: "0.8rem" }}
-            />
-          </a>
+          {overview.liveURL && (
+            <a
+              className="text-3xl cursor-pointer"
+              href={overview.liveURL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BiWorld
+                data-tooltip-id={`${overview.title}-live`}
+                data-tooltip-content="Live"
+              />
+              <Tooltip
+                id={`${overview.title}-live`}
+                place="bottom"
+                style={{ fontSize: "0.8rem" }}
+              />
+            </a>
+          )}
         </div>
       </div>
       <Image

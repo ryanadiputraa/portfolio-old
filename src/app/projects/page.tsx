@@ -23,6 +23,22 @@ const projects: IProjectOverview[] = [
       "Tailwind CSS",
     ],
   },
+  {
+    image: "/img/wa-api.png",
+    title: "Whastapp Web Clone",
+    description:
+      "Whatsapp Web with minimal messaging system capable to be used on multiple devices using whatsapp-web.js and socket.io",
+    codeURL: "https://github.com/ryanadiputraa/whatsapp-api",
+    secondCodeURL: "https://github.com/ryanadiputraa/whatsapp-api-web",
+    skilss: [
+      "NodeJS",
+      "Socket IO",
+      "MongoDB",
+      "ReactJS",
+      "whatsapp-web.js",
+      "Tailwind CSS",
+    ],
+  },
 ]
 
 export default function Projects() {
