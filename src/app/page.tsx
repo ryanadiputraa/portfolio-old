@@ -11,9 +11,9 @@ export default function Home() {
         Frontend Engineer at Garena Indonesia
       </span>
       <h4 className="text-sm sm:text-base mt-4 max-w-2xl text-center text-gradient">
-        I'm a Software Engineer based in Palu, Indonesia. I&apos;m passionate
-        about building software to solve real world problems and learning new
-        things or technology while doing it.
+        I&apos;m a Software Engineer based in Palu, Indonesia. I&apos;m
+        passionate about building software to solve real world problems and
+        learning new things or technology while doing it.
       </h4>
       <div className="flex justify-center items-center mt-6 text-3xl sm:text-5xl gap-4 sm:gap-8">
         <a href="https://github.com/ryanadiputraa" target="_blank">
