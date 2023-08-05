@@ -17,6 +17,9 @@ module.exports = {
       backdropBlur: {
         xs: "1px",
       },
+      boxShadow: {
+        sd: "0 0 1rem 0.1rem #5492F0",
+      },
       keyframes: {
         "fade-in": {
           "0%": { opacity: "0%" },

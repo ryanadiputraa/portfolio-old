@@ -4,10 +4,17 @@ import { IExperience, Timeline } from "./components/timeline"
 const experiences: IExperience[] = [
   {
     company: "Garena Indonesia",
-    date: "Sep 2021 - Present (remote)",
+    date: "Feb 2022 - present",
+    title: "Frontend Engineer (freelance)",
+    description:
+      "Involved in research and improvement of web development technologies used in companies such as TeleportHQ for landing page automation & Million JS for animation.",
+  },
+  {
+    company: "Garena Indonesia",
+    date: "Sep 2021 - Feb 2022",
     title: "Frontend Engineer Intern",
     description:
-      "Encouraged user engagement in game by delivering attractive global, regional or multi-regional in-game web events by using ReactJS",
+      "Encouraged user engagement in game by delivering attractive global, regional or multi-regional in-game web events by using ReactJS.",
   },
   {
     company: "Dicoding Academy (Kampus Merdeka)",
