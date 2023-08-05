@@ -112,6 +112,7 @@ export const Overview = ({ overview, isReverse }: Props) => {
         </div>
       </div>
       <Image
+        priority
         className={`self-center absolute opacity-30 sm:opacity-80 w-full h-full sm:w-[30rem] object-cover sm:object-contain ${
           isReverse ? "sm:left-0" : "right-0"
         }`}

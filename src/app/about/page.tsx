@@ -45,6 +45,10 @@ const skills: ISkill[] = [
     icon: "https://img.icons8.com/color/144/postgreesql.png",
   },
   {
+    label: "MongoDB",
+    icon: "https://img.icons8.com/color/144/mongodb.png",
+  },
+  {
     label: "Docker",
     icon: "https://img.icons8.com/color/144/docker.png",
   },
@@ -53,17 +57,21 @@ const skills: ISkill[] = [
     icon: "https://img.icons8.com/color/144/redis.png",
   },
   {
+    label: "Javascript",
+    icon: "https://img.icons8.com/color/144/javascript.png",
+  },
+  {
     label: "Typescript",
     icon: "https://img.icons8.com/color/144/typescript.png",
   },
-  // {
-  //   label: "Firebase",
-  //   icon: "https://img.icons8.com/color/144/firebase.png",
-  // },
-  // {
-  //   label: "Flutter",
-  //   icon: "https://img.icons8.com/color/144/flutter.png",
-  // },
+  {
+    label: "Tailwind CSS",
+    icon: "https://img.icons8.com/color/144/tailwindcss.png",
+  },
+  {
+    label: "Flutter",
+    icon: "https://img.icons8.com/color/144/flutter.png",
+  },
 ]
 
 export default function About() {
