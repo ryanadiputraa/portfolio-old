@@ -7,7 +7,7 @@ const experiences: IExperience[] = [
     date: "Feb 2022 - present",
     title: "Frontend Engineer (freelance)",
     description:
-      "Involved in research and improvement of web development technologies used in companies such as TeleportHQ for landing page automation & Million JS for animation.",
+      "Involved in research and improvement of web development technologies used in companies such as Audio component for MicroFrontend, TeleportHQ for landing page automation & Million JS for animation.",
   },
   {
     company: "Garena Indonesia",
@@ -76,31 +76,32 @@ const skills: ISkill[] = [
 
 export default function About() {
   return (
-    <div className="max-w-4xl w-full pt-12 pb-12 px-4">
-      <h4 className="text-3xl font-bold mb-4 text-accent text-center sm:text-left">
-        Profile
-      </h4>
-      <div>
-        <p className="text-center sm:text-left">
-          A Software Engineer specialized in Backend Engineering mainly using
-          Golang with experiences building full-stack application using NextJS
-          or ReactJS for Frontend development. Last year Informatics Engineering
-          Student at Tadulako Univerity.
-        </p>
-      </div>
-      <div className="flex flex-col items-center gap-4 mt-20">
-        {experiences.map((exp, idx) => (
-          <Timeline key={idx} experience={exp} />
-        ))}
-      </div>
-      <h4 className="text-3xl font-bold mb-4 text-accent mt-20 text-center sm:text-left">
-        Skills
-      </h4>
-      <div className="flex flex-wrap justify-center items-start gap-[2.25rem]">
-        {skills.map((skill, idx) => (
-          <Skill key={idx} skill={skill} />
-        ))}
-      </div>
+    <div className="max-w-4xl w-full pt-12 pb-12 px-4 flex flex-col gap-12">
+      <section>
+        <h4 className="text-3xl mb-4 font-bold text-accent text-center">Profile</h4>
+        <div>
+          <p className="text-center">
+            A Software Engineer specialized in Backend Engineering mainly using Golang with experiences building
+            full-stack application using NextJS or ReactJS for Frontend development. Last year Informatics Engineering
+            Student at Tadulako Univerity.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div className="flex flex-col items-center gap-4">
+          {experiences.map((exp, idx) => (
+            <Timeline key={idx} experience={exp} />
+          ))}
+        </div>
+      </section>
+      <section>
+        <h4 className="text-3xl mb-6 font-bold text-accent text-center">Tech Stacks</h4>
+        <div className="flex flex-wrap justify-center items-start gap-[2.25rem]">
+          {skills.map((skill, idx) => (
+            <Skill key={idx} skill={skill} />
+          ))}
+        </div>
+      </section>
     </div>
   )
 }
