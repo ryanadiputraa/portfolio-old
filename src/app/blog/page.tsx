@@ -26,9 +26,9 @@ export default function Blog() {
 			{Object.keys(contents).map((title) => {
 				const metaContent = contents[title].meta;
 				return (
-					<div className="flex flex-col items-start">
+					<div key={title} className="flex flex-col items-start">
 						<Link href={`/blog/${title}`}>
-							<h2 className="text-3xl font-bold hover:underline cursor-pointer mb-1">{metaContent.title}</h2>
+							<h2 className="text-3xl font-bold underline cursor-pointer mb-1">{metaContent.title}</h2>
 						</Link>
 						<p className="">{metaContent.description}</p>
 						<span className="text-xs font-thin">{format(metaContent.date, 'EEEE - MMMM do, yyyy')}</span>
