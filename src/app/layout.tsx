@@ -48,8 +48,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<Header pages={pages} />
 				<main className="pt-20 min-h-screen flex justify-center px-4 sm:px-0">{children}</main>
 				<SideNav pages={pages} />
-				<Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} />
-				<Script strategy="afterInteractive">
+				<Script
+					id={measurementId}
+					strategy="afterInteractive"
+					src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+				/>
+				<Script id="google-analytics" strategy="afterInteractive">
 					{`window.dataLayer = window.dataLayer || [];
   					function gtag(){dataLayer.push(arguments);}
   					gtag('js', new Date());
