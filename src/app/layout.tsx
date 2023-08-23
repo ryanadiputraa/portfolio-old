@@ -1,6 +1,7 @@
 import './globals.css';
 import 'react-tooltip/dist/react-tooltip.css';
 import { Open_Sans } from 'next/font/google';
+import Script from 'next/script';
 
 import { Header } from './components/header';
 import { SideNav } from './components/sidenav';
@@ -36,6 +37,8 @@ const pages: INav[] = [
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+	const measurementId = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
+
 	return (
 		<html lang="en" className="dark">
 			<head>
@@ -45,6 +48,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<Header pages={pages} />
 				<main className="pt-20 min-h-screen flex justify-center px-4 sm:px-0">{children}</main>
 				<SideNav pages={pages} />
+				<Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} />
+				<Script strategy="afterInteractive">
+					{`window.dataLayer = window.dataLayer || [];
+  					function gtag(){dataLayer.push(arguments);}
+  					gtag('js', new Date());
+  					gtag('config', '${measurementId}');`}
+				</Script>
 			</body>
 		</html>
 	);
