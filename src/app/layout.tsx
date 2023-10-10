@@ -30,10 +30,10 @@ const pages: INav[] = [
 		href: '/projects',
 		label: 'Projects',
 	},
-	{
-		href: '/blog',
-		label: 'Blog',
-	},
+	// {
+	// 	href: '/blog',
+	// 	label: 'Blog',
+	// },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
