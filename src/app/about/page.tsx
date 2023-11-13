@@ -71,7 +71,7 @@ export default function About() {
   return (
     <div className="max-w-4xl w-full pt-12 pb-12 px-4 flex flex-col gap-20">
       <section>
-        <h4 className="text-3xl mb-4 font-bold text-accent text-center">Expenriences</h4>
+        <h4 className="text-3xl mb-4 font-bold text-accent text-center">Experiences</h4>
         <div className="flex flex-col items-center gap-8">
           {experiences.map((exp, idx) => (
             <Timeline key={idx} experience={exp} />
