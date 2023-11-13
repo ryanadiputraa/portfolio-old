@@ -1,12 +1,12 @@
-import Image from "next/image"
+import Image from 'next/image';
 
 export interface ISkill {
-  label: string
-  icon: string
+  label: string;
+  icon: string;
 }
 
 interface Props {
-  skill: ISkill
+  skill: ISkill;
 }
 
 export const Skill = ({ skill }: Props) => (
@@ -17,4 +17,4 @@ export const Skill = ({ skill }: Props) => (
     <Image src={skill.icon} width={60} height={60} alt="" />
     <span className="font-bold text-center text-sm mt-2">{skill.label}</span>
   </div>
-)
+);

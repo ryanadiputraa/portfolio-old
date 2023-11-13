@@ -2,12 +2,13 @@ import { IProjectOverview, Overview } from './components/overview';
 
 const projects: IProjectOverview[] = [
 	{
-		image: '/img/flows.png',
-		title: 'Flows Microservices',
+		image: '/img/spotwave.png',
+		title: 'Spotwave',
 		description:
-			'Microservices for helping users to manage financial and get insight based on their financial transactions',
-		codeURL: 'https://github.com/ryanadiputraa/flows-microservices',
-		skilss: ['Golang', 'NodeJS', 'PostgreSQL', 'MongoDB', 'RabbitMQ', 'Docker', 'Typescript', 'Nginx'],
+			'Spotify playlist MP3 downloader using Spotify, Youtube, and MP3 converter API. It fetch user Spotify playlist and searchs it on Youtube, then convert and download the MP3.',
+		codeURL: 'https://github.com/ryanadiputraa/spotwave',
+		liveURL: 'https://spotwave.vercel.app',
+		skilss: ['Go', 'Fiber', 'Docker', 'ReactJS', 'Typescript', 'Tailwind CSS'],
 	},
 	{
 		image: '/img/udrio-website.png',
@@ -16,9 +17,8 @@ const projects: IProjectOverview[] = [
 			'Website for UD Rio Digital Printing, allowing customer to place orders online with automatic email notification and Admin Panel for website admin to manage products and customer orders',
 		liveURL: 'https://udrio.vercel.app/',
 		codeURL: 'https://github.com/ryanadiputraa/api-udrio',
-		secondCodeURL: 'https://github.com/ryanadiputraa/udrio',
 		skilss: [
-			'Golang',
+			'Go',
 			'Gin',
 			'NextJS',
 			'OAuth2',
@@ -36,7 +36,6 @@ const projects: IProjectOverview[] = [
 		title: 'TapCart',
 		description: 'Mobile application for customer to checkout with QR Code and for store to manage price and supplies.',
 		codeURL: 'https://github.com/CPNG-99/api-tapcart',
-		secondCodeURL: 'https://github.com/CPNG-99/tapcart',
 		skilss: ['NodeJS', 'Typescript', 'MongoDB', 'Express', 'Flutter', 'Dart', 'QR Code'],
 	},
 ];
@@ -45,7 +44,7 @@ export default function Projects() {
 	return (
 		<div className="max-w-4xl w-full pt-12 pb-12 px-4 flex flex-wrap justify-center items-start gap-40">
 			{projects.map((project, idx) => (
-				<Overview key={idx} overview={project} isReverse={(idx + 1) % 2 === 0} />
+				<Overview key={project.title} overview={project} isReverse={(idx + 1) % 2 === 0} />
 			))}
 		</div>
 	);

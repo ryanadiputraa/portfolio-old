@@ -1,12 +1,12 @@
 import './globals.css';
 import 'react-tooltip/dist/react-tooltip.css';
-import { Open_Sans } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 import Script from 'next/script';
 
 import { Header } from './components/header';
 import { SideNav } from './components/sidenav';
 
-const inter = Open_Sans({ subsets: ['latin'] });
+const inter = Raleway({ subsets: ['latin'] });
 
 export const metadata = {
 	title: 'Ryan Adi Putra',

@@ -10,7 +10,6 @@ export interface IProjectOverview {
 	description: string;
 	liveURL?: string;
 	codeURL: string;
-	secondCodeURL?: string;
 	skilss: string[];
 }
 
@@ -40,7 +39,7 @@ export const Overview = ({ overview, isReverse }: Props) => {
 				</p>
 				<div className={`flex flex-wrap items-start gap-2 mt-8 ${isReverse ? 'sm:flex-row-reverse' : 'flex-row'}`}>
 					{overview.skilss.map((skill, idx) => (
-						<span key={idx} className="text-accent bg-light-accent py-1 px-4 font-bold rounded-full text-xs">
+						<span key={skill} className="italic  text-accent bg-light-accent py-1 px-4 font-bold rounded-full text-xs">
 							{skill}
 						</span>
 					))}
@@ -50,12 +49,6 @@ export const Overview = ({ overview, isReverse }: Props) => {
 						<AiFillGithub data-tooltip-id={`${overview.title}-code-1`} data-tooltip-content="Code (Backend)" />
 						<Tooltip id={`${overview.title}-code-1`} place="bottom" style={{ fontSize: '0.8rem' }} />
 					</a>
-					{overview.secondCodeURL && (
-						<a className="text-3xl cursor-pointer" href={overview.secondCodeURL} target="_blank" rel="noreferrer">
-							<AiFillGithub data-tooltip-id={`${overview.title}-code-2`} data-tooltip-content="Code (Frontend)" />
-							<Tooltip id={`${overview.title}-code-2`} place="bottom" style={{ fontSize: '0.8rem' }} />
-						</a>
-					)}
 					{overview.liveURL && (
 						<a className="text-3xl cursor-pointer" href={overview.liveURL} target="_blank" rel="noreferrer">
 							<BiWorld data-tooltip-id={`${overview.title}-live`} data-tooltip-content="Live" />
