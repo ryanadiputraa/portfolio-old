@@ -14,7 +14,7 @@ const experiences: IExperience[] = [
     date: 'Feb 2022 – Aug 2022',
     title: 'Multi Platform and Backend',
     description:
-      'Collaborated in teams to Develop a multi platform mobile app using Flutter to simplify shopping on physical stores by scanning QR Code that generated from NodeJS backend server.',
+      'Collaborated in teams to Develop a multi platform mobile app using Flutter and NodeJS for backend to simplify shopping on physical stores and help owner manage items with generated QR Codes for each items',
   },
   {
     company: 'Glints Academy (Kampus Merdeka)',
