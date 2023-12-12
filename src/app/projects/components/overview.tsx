@@ -1,5 +1,4 @@
 import { Observer } from '@/app/components/obeserver';
-import Image from 'next/image';
 import { AiFillGithub } from 'react-icons/ai';
 import { BiWorld } from 'react-icons/bi';
 import { Tooltip } from 'react-tooltip';
@@ -57,15 +56,11 @@ export const Overview = ({ overview, isReverse }: Props) => {
           )}
         </div>
       </div>
-      <Image
-        priority
-        className={`self-center absolute opacity-30 sm:opacity-80 w-full h-full sm:w-[30rem] object-cover sm:object-contain ${
-          isReverse ? 'sm:left-0' : 'right-0'
+      <div
+        style={{ backgroundImage: `url(${overview.image})` }}
+        className={`bg-center bg-cover sm:bg-full self-center absolute opacity-30 sm:opacity-80 w-full sm:w-[30rem] h-full ${
+          isReverse ? 'sm:left-0' : 'sm:right-0'
         }`}
-        src={overview.image}
-        width={500}
-        height={350}
-        alt=""
       />
     </Observer>
   );

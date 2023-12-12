@@ -20,6 +20,9 @@ module.exports = {
       boxShadow: {
         sd: '0 0 1rem 0.1rem #5492F0',
       },
+      backgroundSize: {
+        full: '100% 100%',
+      },
       keyframes: {
         'fade-in': {
           '0%': { opacity: '0%' },
